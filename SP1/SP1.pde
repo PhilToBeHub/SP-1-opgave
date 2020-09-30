@@ -29,6 +29,7 @@ void setup()
   
   file = new SoundFile(this, "Zelda_time.mp3");
   file.play();
+  file.amp(0.20);
 }
 
 void keyReleased()
