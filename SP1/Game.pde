@@ -16,6 +16,7 @@ class Game
   private Dot player2;
   private Dot[] enemies;
   private Dot[] food;
+ 
 
 
 
@@ -352,19 +353,11 @@ class Game
 
   public void gameEnd() {
     if (playerLife <= 0 || player2Life <= 0) {
-      background(0);
-      textFont(font, 20);
-      fill(255);
-      text("Game Over.", 10, height/2);
       noLoop();
     }
-  
-  if (playerPoint == 15 || player2Point == 15) {
-    background(0);
-    textFont(font, 20);
-    fill(255);
-    text("Game Over.", 10, height/2);
-    noLoop();
+
+    if (playerPoint == 1 || player2Point == 15) {
+      noLoop();
+    }
   }
-}
 }

@@ -8,9 +8,16 @@
  */
 
 import java.util.Random;
+import processing.sound.*;
+import ddf.minim.*;
 
-Game game = new Game(30, 20, 1, 1);
+Game game = new Game(30, 20, 6, 1);
 PFont font;
+
+SoundFile file;
+AudioPlayer player;
+Minim minim;
+
 
 public void settings() {
   size(1201, 801);
@@ -21,6 +28,12 @@ void setup()
   frameRate(10);
   font = createFont("Arial", 16, true);
   textFont(font, 16);
+  
+  //file = new SoundFile(this, "Zelda_time.mp3");
+  //file.play();
+  minim = new Minim(this);
+  player = minim.loadFile("Zelda_time.mp3", 2048);
+  player.play();
 }
 
 void keyReleased()
@@ -73,8 +86,8 @@ void draw()
   text("Lifes: "+game.getPlayer2Life(), 1100, 25);
   text("Points: "+game.getPlayerPoint(), 25, 50);
   text("Points: "+game.getPlayer2Point(), 1100, 50);
-
-
+  
+ 
 
       
 
