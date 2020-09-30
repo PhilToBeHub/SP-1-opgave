@@ -9,14 +9,12 @@
 
 import java.util.Random;
 import processing.sound.*;
-import ddf.minim.*;
+
 
 Game game = new Game(30, 20, 6, 1);
 PFont font;
 
 SoundFile file;
-AudioPlayer player;
-Minim minim;
 
 
 public void settings() {
@@ -29,11 +27,8 @@ void setup()
   font = createFont("Arial", 16, true);
   textFont(font, 16);
   
-  //file = new SoundFile(this, "Zelda_time.mp3");
-  //file.play();
-  minim = new Minim(this);
-  player = minim.loadFile("Zelda_time.mp3", 2048);
-  player.play();
+  file = new SoundFile(this, "Zelda_time.mp3");
+  file.play();
 }
 
 void keyReleased()
