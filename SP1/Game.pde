@@ -277,6 +277,8 @@ class Game
       {
         //We have a collision
         ++playerPoint;
+        food[i].setX((int)random(0,width));
+        food[i].setY((int)random(0,height));
       }
     }
 
@@ -286,6 +288,8 @@ class Game
       {
         //We have a collision
         ++player2Point;
+        food[i].setX((int)random(0,width));
+        food[i].setY((int)random(0,height));
       }
     }
   }
@@ -356,7 +360,7 @@ class Game
       noLoop();
     }
 
-    if (playerPoint == 1 || player2Point == 15) {
+    if (playerPoint == 15 || player2Point == 15) {
       noLoop();
     }
   }

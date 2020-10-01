@@ -11,7 +11,7 @@ import java.util.Random;
 import processing.sound.*;
 
 
-Game game = new Game(30, 20, 6, 1);
+Game game = new Game(30, 20, 6, 3);
 PFont font;
 
 SoundFile file;
